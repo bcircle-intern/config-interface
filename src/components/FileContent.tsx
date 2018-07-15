@@ -1,6 +1,7 @@
 import React from "react"
 import { TextArea, Button } from "semantic-ui-react"
 import styled from "styled-components"
+import style from "css"
 
 const LabelDiv = styled.div`
   margin-bottom: 5px;
@@ -45,8 +46,8 @@ export class FileContent extends React.Component<Props, State> {
             <div>
             <ContentDiv>
                 <LabelDiv>Content</LabelDiv>
-                <TextArea value={this.state.projectContent}
-                    style={{ width: "100%", height: "calc(50% - 30px)" }}
+                <TextArea autoheight value={this.state.projectContent}
+                    style={{ minHeight: 300, width: "100%" }}
                     onChange={this.handleContentChange} />
             </ContentDiv>
             <div>

@@ -23,13 +23,6 @@ export class FileList extends React.Component<Props> {
         super(props)
     }
 
-    /*
-    public findPath(file: string) {
-        let index = this.props.pathProject.findIndex(x => x.indexOf(file) !== -1)
-        return index
-    }
-    */
-
     private getFiles = (node: Node) => {
         return this.props.nodes.filter(x => x.parent === node.id && x.isFile)
     }
@@ -40,9 +33,6 @@ export class FileList extends React.Component<Props> {
 
     public render() {
         let { folder, nodes } = this.props;
-        /*let isSelected = (file) => {
-            return this.props.projectPath.indexOf(file) !== -1
-        }*/
         const ListMain = ({ }) => (
             <List.Item>
                 <List.Icon name="folder" size="large" verticalAlign="middle" />
@@ -57,16 +47,12 @@ export class FileList extends React.Component<Props> {
                 {this.getFolders(folder).map(x => <FileList projectPath={this.props.projectPath} fileName={this.props.fileName} pathProject={this.props.pathProject} isSelected={this.props.isSelected} onSelect={this.props.onSelect} folder={x} nodes={nodes} />)}
                 {this.getFiles(folder).map(x => <File projectPath={this.props.projectPath} fileName={this.props.fileName} pathProject={this.props.pathProject} isSelected={this.props.isSelected} onSelect={this.props.onSelect} file={x} />)}
                 </List.List>
-            </List.Item>
-
-        )
+            </List.Item>                  )
         // _______________สร้างlist_____________|
         return (
             <List divided selection relaxed >
                 <ListMain />
             </List>
-
-        )
+            )
     }
 }
-
