@@ -4,36 +4,36 @@
     "description": "```bash npm install ```",
     "main": "index.js",
     "dependencies": {
-        "highlightable": "^1.0.7"
+      "highlightable": "^1.0.7",
+      "monaco-editor": "^0.13.1",
+      "react-monaco-editor": "^0.17.2"
     },
     "devDependencies": {
-        "@types/react": "^16.4.6",
-        "@types/react-alert": "^2.4.1",
-        "@types/react-dom": "^16.0.6",
-        "axios": "^0.18.0",
-        "babel-core": "^6.26.3",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "parcel-bundler": "^1.9.7",
-        "react": "^16.4.1",
-        "react-dom": "^16.4.1",
-        "react-monaco-editor": "^0.17.2",
-        "semantic-ui-css": "^2.3.2",
-        "semantic-ui-react": "^0.81.3",
-        "styled-components": "^3.3.3",
-        "typescript": "^2.9.2"
+      "@types/react": "^16.4.6",
+      "@types/react-alert": "^2.4.1",
+      "@types/react-dom": "^16.0.6",
+      "axios": "^0.18.0",
+      "react": "^16.4.1",
+      "react-dom": "^16.4.1",
+      "semantic-ui-css": "^2.3.3",
+      "semantic-ui-react": "^0.81.3",
+      "styled-components": "^3.3.3"
     },
     "scripts": {
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html -d ../ConfigService/src/ConfigService/wwwroot --public-url /"
+      "start": "parcel src/index.html",
+      "build": "parcel build src/index.html -d ./config-service/src/ConfigService/wwwroot",
+      "build-vscode": "parcel build src/index.html --no-minify -d ../config-service/src/ConfigService/wwwroot --public-url /",
+      "build-all": "npm run build; npm run build-vscode"
     },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bcircle-intern/config-interface.git"
+      "type": "git",
+      "url": "git+https://github.com/bcircle-intern/config-interface.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/bcircle-intern/config-interface/issues"
+      "url": "https://github.com/bcircle-intern/config-interface/issues"
     },
     "homepage": "https://github.com/bcircle-intern/config-interface#readme"
-}
+  }
+  
