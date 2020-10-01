@@ -44,7 +44,7 @@ export class App extends React.Component<{}, State> {
         setTimeout(() => {
             this.setState({ loggedIn: false })
             AppStorage.Logout()
-        }, 800)
+        }, 850)
     }
     public onLogoutPlease = () => {
         this.setState({ loggedIn: false })
